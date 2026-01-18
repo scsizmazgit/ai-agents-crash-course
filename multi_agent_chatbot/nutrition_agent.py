@@ -56,13 +56,14 @@ def calorie_lookup_tool(query: str, max_results: int = 3) -> str:
 
 
 # EXA Search MCP setup
+# Increased EXA timeout from 30 to 90 seconds since EXA can take longer than 30 seconds to respond when under heavy load
 exa_search_mcp = MCPServerStreamableHttp(
     name="Exa Search MCP",
     params={
         "url": f"https://mcp.exa.ai/mcp?{os.environ.get('EXA_API_KEY')}",
-        "timeout": 30,
+        "timeout": 90,
     },
-    client_session_timeout_seconds=30,
+    client_session_timeout_seconds=90,
     cache_tools_list=True,
     max_retry_attempts=1,
 )
