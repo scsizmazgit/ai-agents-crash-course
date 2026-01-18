@@ -1,5 +1,8 @@
 {
     "jupyter.kernels.excludePythonEnvironments": [
         "/usr/bin/python3.11"
+    ],
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
     ]
 }
