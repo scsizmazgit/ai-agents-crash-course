@@ -6,7 +6,7 @@ from openai.types.responses import ResponseTextDeltaEvent
 
 from agents import Runner, SQLiteSession
 #from nutrition_agent import nutrition_agent
-from nutrition_agent import nutrition_agent
+from nutrition_agent_v5 import nutrition_agent
 
 dotenv.load_dotenv()
 
